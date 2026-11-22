@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If Braidiant helps your work, cite the repository until a DOI is available."
+title: "Braidiant: numerical consistency audits and braid representations for anyon models"
+type: software
+repository-code: "https://github.com/qntmspark/QuantumSparkNew/tree/braidiant-oss"
+version: "0.1.0"
+license: MIT
+authors:
+  - name: "Braidiant contributors (confirm individual authors before formal citation)"

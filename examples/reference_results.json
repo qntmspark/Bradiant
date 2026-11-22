@@ -1,0 +1,92 @@
+{
+  "braid_examples": [
+    {
+      "charge": "tau",
+      "dimension": 2,
+      "model": "Fibonacci",
+      "n": 4,
+      "relations": {
+        "far_commutation": 0.0,
+        "unitarity": 1.5771601243876645e-16,
+        "yang_baxter": 2.355138688025663e-16
+      },
+      "total": "1"
+    },
+    {
+      "charge": "tau",
+      "dimension": 5,
+      "model": "Fibonacci",
+      "n": 6,
+      "relations": {
+        "far_commutation": 1.462488295955489e-17,
+        "unitarity": 1.6653345369377348e-16,
+        "yang_baxter": 3.253794000681681e-16
+      },
+      "total": "1"
+    },
+    {
+      "charge": "sigma",
+      "dimension": 2,
+      "model": "Ising",
+      "n": 4,
+      "relations": {
+        "far_commutation": 0.0,
+        "unitarity": 5.551953630577995e-16,
+        "yang_baxter": 2.7755575615628914e-16
+      },
+      "total": "1"
+    },
+    {
+      "charge": "sigma",
+      "dimension": 4,
+      "model": "Ising",
+      "n": 6,
+      "relations": {
+        "far_commutation": 0.0,
+        "unitarity": 4.440892098500626e-16,
+        "yang_baxter": 1.2412670766236366e-16
+      },
+      "total": "1"
+    }
+  ],
+  "model_audits": [
+    {
+      "f_sectors": 12,
+      "f_unitarity_residual": 1.1102230246251565e-16,
+      "hexagon_residual": 3.1401849173675503e-16,
+      "hexagon_sectors": 24,
+      "model": "Fibonacci",
+      "passed": true,
+      "pentagon_residual": 1.1102230246251565e-16,
+      "pentagon_sectors": 27,
+      "r_unitarity_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "f_sectors": 33,
+      "f_unitarity_residual": 2.220446049250313e-16,
+      "hexagon_residual": 3.410902312858366e-16,
+      "hexagon_sectors": 66,
+      "model": "Ising",
+      "passed": true,
+      "pentagon_residual": 2.220446049250313e-16,
+      "pentagon_sectors": 106,
+      "r_unitarity_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "f_sectors": 27,
+      "f_unitarity_residual": 0.0,
+      "hexagon_residual": 1.4432899320127035e-15,
+      "hexagon_sectors": 54,
+      "model": "Z3(k=1)",
+      "passed": true,
+      "pentagon_residual": 0.0,
+      "pentagon_sectors": 81,
+      "r_unitarity_residual": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    }
+  ],
+  "note": "double-precision numerical verification only",
+  "schema_version": 1
+}

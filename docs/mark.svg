@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Three interlaced braid strands">
+  <rect width="120" height="120" rx="20" fill="#ffffff" />
+  <g fill="none" stroke-width="7" stroke-linecap="round">
+    <path d="M28 15 C29 33 90 34 91 56 C92 78 28 82 28 104" stroke="#17222b"/>
+    <path d="M60 15 C61 37 28 44 29 60 C29 76 89 81 91 104" stroke="#b38c4d"/>
+    <path d="M92 15 C92 35 61 47 60 60 C59 73 60 89 60 104" stroke="#65798a"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="10" fill="none">
+    <path d="M42 31 L52 37"/>
+    <path d="M78 72 L88 76"/>
+  </g>
+  <g stroke-linecap="round" stroke-width="7" fill="none">
+    <path d="M41 31 L52 37" stroke="#17222b"/>
+    <path d="M78 72 L88 76" stroke="#b38c4d"/>
+  </g>
+</svg>

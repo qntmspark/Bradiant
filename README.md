@@ -1,1 +1,144 @@
-# QuantumSparkNew
+<div align="center">
+  <img src="docs/mark.svg" width="110" alt="Braidiant mark: three smooth interlaced strands">
+
+  # Braidiant
+
+  **Auditable anyon data. Reproducible braids.**
+
+  A lightweight, open-source Python research library for checking numerical fusion-category
+  consistency and constructing finite-dimensional anyonic braid representations.
+</div>
+
+---
+
+## Why Braidiant?
+
+An anyon model is not determined merely by its fusion rules. Its associators (F symbols)
+ and exchanges (R symbols) must satisfy stringent algebraic identities before numerical
+ braiding predictions can be trusted. Conventions, phases, category gauge changes and
+fusion-tree indexing can create subtle errors, even in small models.
+
+**Braidiant** provides an independent, inspectable path from raw F/R tables to
+**exhaustively enumerated numerical coherence tests** for a finite multiplicity-free
+model, and then to braid matrices, braid words and reproducible JSON records.
+
+This is a **software verification tool**, not a hardware experiment or a claim of
+machine-checked mathematical proof. Floating-point residuals diagnose the supplied
+numerical data to the stated tolerance.
+
+## Capabilities
+
+- Validate fusion-table completeness, the unit, commutativity and fusion associativity.
+- Check F-block unitarity and R-symbol unimodularity.
+- Enumerate **all** charge sectors of both pentagon and both hexagon identities.
+- Construct the braid group generators on homogeneous fusion-path Hilbert spaces.
+- Check Yang–Baxter, distant-generator commutation and unitary inverse relations.
+- Rephase fusion vertices and confirm gauge-covariant consistency.
+- Import and export explicitly specified, versioned JSON F/R data.
+- Produce machine-readable diagnostics for independent reproduction and regression testing.
+- Start from documented reference models: Fibonacci, Ising, and pointed cyclic Z_n models.
+
+## Quick start
+
+Requires Python 3.10 or later. Clone the repository or unpack a source release, then run:
+
+```bash
+python -m pip install -e '.[dev]'
+python -m pytest
+braidiant audit
+braidiant --model ising audit
+braidiant --model cyclic --n 3 audit
+braidiant braid --charge tau --anyons 4 --total 1 --word 1,-2,1
+```
+
+The command prints JSON and returns a nonzero status if an audit fails the specified
+tolerance. The positive braid generator `i` exchanges positions `i` and `i+1`;
+a negative integer denotes its inverse. Command-line flags `--model`, `--model-file`,
+`--tol` and `--output` precede the subcommand.
+
+### Python API
+
+```python
+from braidiant import fibonacci, audit, BraidRepresentation
+
+model = fibonacci()
+result = audit(model, tol=1e-10)
+assert result.passed
+
+braids = BraidRepresentation(model, charge="tau", number=4, total="1")
+assert braids.dimension == 2
+print(braids.generator(2))
+print(braids.word([1, -2, 1]))
+print(braids.relations())
+```
+
+### Load your own fusion model
+
+```python
+from braidiant import load_model, audit, save_model, fibonacci
+save_model(fibonacci(), "fibonacci.json")
+model = load_model("fibonacci.json")
+print(audit(model).to_dict())
+```
+
+The JSON schema uses `charges`, `unit`, `fusion`, `F`, `R`, `schema_version: 1`,
+and each complex entry is represented by its real and imaginary parts. See
+[`docs/model_format.md`](docs/model_format.md) and
+[`examples/fibonacci.json`](examples/fibonacci.json) for the exact ordering.
+
+## Reproduce the verification data
+
+```bash
+python examples/reproduce.py > reproduced.json
+python -m pytest
+```
+
+The repository includes a reference JSON report at
+[`examples/reference_results.json`](examples/reference_results.json), generated
+from actual numerical code execution. Tiny residual differences between NumPy/platform
+versions are expected; use the numerical tolerance, not byte-for-byte equality.
+
+| Built-in model | Pentagon sectors checked | Hexagon sectors checked | Typical max numerical residual |
+|---|---:|---:|---:|
+| Fibonacci | 27 | 24 | below 1e-12 |
+| Ising | 106 | 66 | below 1e-12 |
+| Cyclic Z₃ | 81 | 54 | below 1e-12 |
+
+All figures are from the bundled computations, **not from quantum hardware**.
+
+## Scientific conventions and limits
+
+The core currently supports finite, **unitary, multiplicity-free, braided** fusion
+data. F-matrices are defined for `((a b)_e c)_d -> (a (b c)_f)_d`, with entries
+`F[a,b,c,d,e,f]`. Their physical gauge is explicit. The implementation does
+**not** calculate tensor categories from generators, find F/R solutions, certify
+symbolic equalities, treat fusion multiplicities above one, or implement
+noise models, decoders, experimental control or arbitrarily many anyons.
+Braid representations use identical external charges and up to nine anyons;
+exact limits depend on the exponential dimension of fusion spaces.
+
+See [`docs/mathematics.md`](docs/mathematics.md) and
+[`docs/reproducibility.md`](docs/reproducibility.md).
+
+## Relationship to existing tools
+
+[Anyonica](https://anyonwiki.org/docs/software) is aimed at finding and
+classifying fusion-category data; [TQSim](https://github.com/Constantine-Quantum-Tech/tqsim)
+provides anyonic quantum-circuit simulation. Braidiant is scoped as an
+independent, table-driven *audit* and braid-representation library, with all
+sector-level identities checked, JSON input/output, and deliberate corruption
+regression tests. This is a complementary focus, not a claim of superior speed or
+coverage, and no systematic performance comparison has yet been made.
+
+## Open development and publication status
+
+Version **0.1.0** is the initial research release. The included
+[`paper.md`](paper.md) is a **JOSS preparation draft**, not a submitted or
+accepted JOSS article. The current JOSS editorial gate requires at least six
+months of public, active, iterative development, demonstrated research use,
+and documented open-source practices. See [`docs/joss_readiness.md`](docs/joss_readiness.md).
+
+The package is MIT licensed. Contributions and independently reproduced results
+are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Project support is via GitHub
+issues. Please cite the software via the repository URL until a permanent archive
+DOI exists. No PyPI deployment or journal acceptance is claimed.
