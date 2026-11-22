@@ -7,7 +7,7 @@ before the editorial eligibility conditions in `joss_readiness.md` are met.
 - **Software repository:** https://github.com/qntmspark/QuantumSparkNew/tree/braidiant-oss
   (temporary public branch; a dedicated repository is required for clean maintenance)
 - **Paper:** `paper.md` in the same branch
-- **Bibliography:** `paper/references.bib`
+- **Bibliography:** `paper.bib`
 - **License:** MIT, full license included in `LICENSE`
 - **Language:** Python (NumPy dependency)
 - **Keywords:** topological quantum computation; anyons; fusion categories;
@@ -48,7 +48,7 @@ before the editorial eligibility conditions in `joss_readiness.md` are met.
    all bibliography details, and human responsibility statement.
 6. Create an archived software release/DOI (e.g. Zenodo) when the maintained
    repository and release are stable; update paper and `CITATION.cff`.
-7. Validate `paper.md` with the official JOSS paper build before filling the
+7. Check the official JOSS typesetting workflow and proof at https://github.com/qntmspark/QuantumSparkNew/actions/runs/44978346689 before filling the
    form at https://joss.theoj.org/papers/new.
 
 JOSS sources checked 2026-11-21:

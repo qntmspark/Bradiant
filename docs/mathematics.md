@@ -127,7 +127,7 @@ accounts in Preskill's *Topological Quantum Computation* lecture notes, and
 Pachos' *Introduction to Topological Quantum Computation*. Test cases include
 Fibonacci, chiral Ising and pointed cyclic models. Known reference braid
 spectra and Fibonacci/Ising fusion-space dimensions are tested directly.
-The exact source bibliography is in `paper/references.bib`.
+The exact source bibliography is in `paper.bib`.
 
 ## 8. Fusion and braiding invariants
 

@@ -18,7 +18,9 @@ A newly uploaded code dump does not meet the public-history requirement.
 - [x] JSON model interchange, CLI and stable examples.
 - [x] Documentation of mathematics, limitations and reproducibility.
 - [x] GitHub Actions workflow supplied for future remote CI runs.
-- [x] JOSS-formatted **draft** `paper.md` with bibliography and preview PDF.
+- [x] JOSS-formatted **draft** `paper.md` with canonical root `paper.bib`.
+- [x] Official Open Journals PDF generator succeeded (2026-11-22): https://github.com/qntmspark/QuantumSparkNew/actions/runs/44978346689.
+- [x] Full document visually checked after journal typesetting (three-page draft).
 - [x] Gauge-independent dimensions and double-braiding invariants, analytic checks.
 - [x] Reproducible local timing protocol and full source distribution.
 - [ ] Independent scientific cross-validation and external feedback.
@@ -27,7 +29,7 @@ A newly uploaded code dump does not meet the public-history requirement.
 - [ ] Recorded research use in a preprint, research workflow, or external project.
 - [ ] Human author verifies contributor identity, contribution statements,
       mathematical and programming choices, software claims, licensing and AI disclosure.
-- [ ] Permanent archived software release (e.g., Zenodo) with real DOI.
+- [ ] Permanent archived software release (e.g., Zenodo) with real DOI; JOSS draft DOI is an automated placeholder, not a DOI.
 - [ ] JOSS form submitted and editorial pre-review issue opened.
 
 ## Sustainable development plan
