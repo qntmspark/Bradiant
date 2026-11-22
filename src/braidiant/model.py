@@ -27,11 +27,17 @@ class FusionModel:
     r_symbols: Mapping[tuple[str, str, str], complex]
 
     def __post_init__(self) -> None:
-        if len(set(self.charges)) != len(self.charges) or not self.charges:
+        if (not self.charges or any(not isinstance(a, str) or not a for a in self.charges)
+                or len(set(self.charges)) != len(self.charges)):
             raise ModelError("charges must be nonempty and distinct")
         if self.unit not in self.charges:
             raise ModelError("unit is not a charge")
         names = set(self.charges)
+        expected_fusion = {(a, b) for a in self.charges for b in self.charges}
+        if set(self.fusion) != expected_fusion:
+            raise ModelError("fusion table has missing or unexpected entries")
+        expected_r = set()
+        expected_f = set()
         for a in self.charges:
             for b in self.charges:
                 outputs = self.fusion.get((a, b))
@@ -43,9 +49,18 @@ class FusionModel:
                     raise ModelError("unit must fuse trivially on the right")
                 if set(outputs) != set(self.fusion.get((b, a), ())):
                     raise ModelError("braided fusion must be commutative")
+                if not outputs:
+                    raise ModelError(f"empty fusion product: {(a, b)}")
                 for c in outputs:
+                    expected_r.add((a, b, c))
                     if (a, b, c) not in self.r_symbols:
                         raise ModelError(f"R symbol missing for {(a,b,c)}")
+        for a in self.charges:
+            candidates = [b for b in self.charges if self.unit in self.fusion[a, b]]
+            if len(candidates) != 1:
+                raise ModelError(f"simple object {a} must have a unique dual")
+        if set(self.r_symbols) != expected_r:
+            raise ModelError("R table has unexpected entries")
         for entry, value in list(self.f_symbols.items()) + list(self.r_symbols.items()):
             z = complex(value)
             if not isfinite(z.real) or not isfinite(z.imag):
@@ -59,8 +74,17 @@ class FusionModel:
                             raise ModelError(f"fusion not associative: {(a,b,c,d)}")
                         for e in left:
                             for f in right:
+                                expected_f.add((a, b, c, d, e, f))
                                 if (a, b, c, d, e, f) not in self.f_symbols:
                                     raise ModelError(f"F symbol missing for {(a,b,c,d,e,f)}")
+        if set(self.f_symbols) != expected_f:
+            raise ModelError("F table has unexpected entries")
+
+    def dual(self, a: str) -> str:
+        """Unique simple dual as determined by the vacuum fusion channel."""
+        if a not in self.charges:
+            raise ModelError(f"unknown charge: {a}")
+        return next(b for b in self.charges if self.unit in self.fuse(a, b))
 
     def fuse(self, a: str, b: str) -> tuple[str, ...]:
         return self.fusion[(a, b)]

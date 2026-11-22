@@ -116,7 +116,7 @@ generators are applied; a negative letter is the matrix inverse.
   tree-search complexity, so the CLI currently limits n to at most 9.
 - Unsupported: fusion multiplicities >1; non-unitary F-symbols; non-semisimple
   categories; nontrivial pivotal structures; evaluation of topological spins,
-  S matrices and modularity; mixed-charge braiding; experimental noise models.
+  S matrices, ribbon twists and modularity proofs; mixed-charge braiding; experimental noise models.
 - No numerical accelerator, circuit synthesis compiler or certified interval
   arithmetic is claimed.
 
@@ -128,3 +128,44 @@ Pachos' *Introduction to Topological Quantum Computation*. Test cases include
 Fibonacci, chiral Ising and pointed cyclic models. Known reference braid
 spectra and Fibonacci/Ising fusion-space dimensions are tested directly.
 The exact source bibliography is in `paper/references.bib`.
+
+## 8. Fusion and braiding invariants
+
+For each simple object `a`, define the integer fusion matrix
+`(N_a)_{bc} = N_{ab}^c`. The vector of Frobenius--Perron dimensions is
+the positive common eigenvector
+
+\[
+\sum_c N_{ab}^{c} d_c = d_a d_b, \qquad d_{\mathbf{1}}=1.
+\]
+
+The implementation numerically finds the dominant eigenvector of
+`M = sum_a N_a`, normalizes its vacuum entry to one, and independently
+checks every `N_a d = d_a d`. It reports the residual, the squared global
+dimension `Dim = sum_a d_a^2`, and total dimension `sqrt(Dim)`. In a
+**unitary fusion category** the FP dimensions agree with the canonical
+positive quantum dimensions. These cannot in general be equated for arbitrary
+nonunitary input.
+
+The gauge-independent channel double braiding is
+
+\[
+M_{ab}^{c} = R_{ab}^{c} R_{ba}^{c}.
+\]
+
+An object is transparent if `M_ab^c=1` in every allowed channel for every
+`b`, within the specified numerical tolerance. The outputs characterize the
+transparent part of a coherent braided fusion system; they do not provide
+ribbon twists, S matrices, topological central charge, or a proof of
+non-degeneracy. A `cyclic(4,1)` model has a nontrivial transparent object
+`2`, while Fibonacci and chiral Ising have only the unit as transparent.
+
+## 9. Tensor-unit normalization and precise failure reports
+
+We fix a strict unit gauge. Whenever one external input in an F move is the
+tensor unit, the corresponding F matrix should be the identity, and exchanging
+the unit with any charge gives R=1. The audit separately reports the maximum
+`unit_residual`. For pentagon/hexagon residuals, `worst_*_sector` records the
+external charge labels and total charge at the largest error. These fields
+help isolate inconsistencies without mistaking a scalar global maximum for a
+complete diagnosis of a custom model.

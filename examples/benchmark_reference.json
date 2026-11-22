@@ -1,0 +1,38 @@
+{
+  "benchmark_protocol": "perf_counter warmup once, repeated full calls",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "timings": {
+    "audit_fibonacci": {
+      "max_seconds": 0.05646262100003696,
+      "median_seconds": 0.010315933999891058,
+      "min_seconds": 0.009868418999985806,
+      "repeats": 7
+    },
+    "audit_ising": {
+      "max_seconds": 0.062158828000065114,
+      "median_seconds": 0.049350407000019914,
+      "min_seconds": 0.048463860000083514,
+      "repeats": 7
+    },
+    "audit_z3": {
+      "max_seconds": 0.04486437799982923,
+      "median_seconds": 0.0436419970001225,
+      "min_seconds": 0.04285386700007621,
+      "repeats": 7
+    },
+    "braid_fibonacci_6": {
+      "max_seconds": 0.0018578499998511688,
+      "median_seconds": 0.0017549369999869668,
+      "min_seconds": 0.00161377800009177,
+      "repeats": 7
+    },
+    "braid_ising_6": {
+      "max_seconds": 0.0016322550000040792,
+      "median_seconds": 0.0013087939998968068,
+      "min_seconds": 0.0012411539998993248,
+      "repeats": 7
+    }
+  }
+}

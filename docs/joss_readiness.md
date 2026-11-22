@@ -18,7 +18,9 @@ A newly uploaded code dump does not meet the public-history requirement.
 - [x] JSON model interchange, CLI and stable examples.
 - [x] Documentation of mathematics, limitations and reproducibility.
 - [x] GitHub Actions workflow supplied for future remote CI runs.
-- [x] JOSS-formatted **draft** `paper.md` with bibliography.
+- [x] JOSS-formatted **draft** `paper.md` with bibliography and preview PDF.
+- [x] Gauge-independent dimensions and double-braiding invariants, analytic checks.
+- [x] Reproducible local timing protocol and full source distribution.
 - [ ] Independent scientific cross-validation and external feedback.
 - [ ] Stable public upstream repository with full issue tracker and reviewable PRs.
 - [ ] >6 months of active public development with releases distributed in time.
@@ -31,7 +33,9 @@ A newly uploaded code dump does not meet the public-history requirement.
 ## Sustainable development plan
 
 Version 0.1: numerical audit, reference models, source release, initial
-reproducibility results. Future iterations should be driven by actual use and
+reproducibility results. Version 0.2: stronger structural/unit validation,
+channel-wise monodromy, Perron--Frobenius invariants, provenance hashes,
+analytic cross-checks and reproducible timing protocol. Future iterations should be driven by actual use and
 public issue reports. Potential research extensions include efficient fusion
 basis enumeration, category datasets with explicit gauge provenance,
 interop with AnyonWiki, mixed-charge braid groupoids, precision/interval
