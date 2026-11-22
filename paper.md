@@ -58,7 +58,7 @@ This establishes reproducible numerical checks on concrete category datasets wit
 
 # AI usage disclosure
 
-OpenAI ChatGPT (GPT-6, November 2026) assisted with software implementation, test development, documentation, and manuscript drafting. Automated tests, analytic reference comparisons, invalid-input tests, and gauge checks were executed to assess the generated material. The test suite and reproducibility materials provide verifiable checks of the assisted software; these checks do not replace independent expert review.
+OpenAI ChatGPT (GPT-6, November 2026) assisted with software implementation, test development, documentation, and manuscript drafting. Automated tests, analytic reference comparisons, invalid-input tests, and gauge checks were executed to assess the generated material.
 
 # Acknowledgements
 
