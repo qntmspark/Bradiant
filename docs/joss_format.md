@@ -21,7 +21,7 @@ its references, or the workflow. The resulting `paper.pdf` is saved as the
 `bradiant-joss-draft` artifact on the GitHub Actions run.
 
 The reference build on 2026-11-22 passed:
-https://github.com/qntmspark/Bradiant/actions/runs/44978346689
+https://github.com/qntmspark/Bradiant/actions/runs/44982374465
 
 The official proof is watermarked **DRAFT**, contains line numbers and a
 placeholder `10.xxxxxx/draft` DOI, and may display journal/editor/date

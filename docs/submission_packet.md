@@ -46,7 +46,7 @@ before the editorial eligibility conditions in `joss_readiness.md` are met.
    all bibliography details, and human responsibility statement.
 6. Create an archived software release/DOI (e.g. Zenodo) when the maintained
    repository and release are stable; update paper and `CITATION.cff`.
-7. Check the official JOSS typesetting workflow and proof at https://github.com/qntmspark/Bradiant/actions/runs/44978346689 before filling the
+7. Check the official JOSS typesetting workflow and proof at https://github.com/qntmspark/Bradiant/actions/runs/44982374465 before filling the
    form at https://joss.theoj.org/papers/new.
 
 JOSS sources checked 2026-11-21:

@@ -19,7 +19,7 @@ A newly uploaded code dump does not meet the public-history requirement.
 - [x] Documentation of mathematics, limitations and reproducibility.
 - [x] GitHub Actions CI workflow supplied; new main-branch run must pass.
 - [x] JOSS-formatted **draft** `paper.md` with canonical root `paper.bib`.
-- [x] Official Open Journals PDF generator succeeded (2026-11-22): https://github.com/qntmspark/Bradiant/actions/runs/44978346689.
+- [x] Official Open Journals PDF generator succeeded (2026-11-22): https://github.com/qntmspark/Bradiant/actions/runs/44982374465.
 - [x] Full document visually checked after journal typesetting (three-page draft).
 - [x] Gauge-independent dimensions and double-braiding invariants, analytic checks.
 - [x] Reproducible local timing protocol and full source distribution.

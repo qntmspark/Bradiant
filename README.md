@@ -163,7 +163,7 @@ coverage, and no systematic performance comparison has yet been made.
 
 ## Open development and publication status
 
-Version **0.2.1** is a research-software development release. The included
+Version **0.3.1** is a research-software development release. The included
 [`paper.md`](paper.md) is a **JOSS preparation draft**, not a submitted or
 accepted JOSS article. The current JOSS editorial gate requires more than six
 months of public, active, iterative development, demonstrated research use,
