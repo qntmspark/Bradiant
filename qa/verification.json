@@ -1,7 +1,7 @@
 {
   "author_human_signoff": "not yet recorded",
   "bibliography": "paper.bib",
-  "ci_verification": "pending new main branch publication",
+  "ci_verification": "GitHub Actions: Python test/build passed on main (run 44981162554); JOSS official draft passed (run 44981162559)",
   "joss_submission": "not submitted",
   "logo_integrity": "original user-supplied PNG preserved byte for byte",
   "logo_sha256": "1d14d1cfda143d649611c84d1542cbaad680963ed773cc0e9e8aa685a79fd870",
