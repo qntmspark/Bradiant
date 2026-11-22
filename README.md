@@ -15,7 +15,7 @@
 
 An anyon model is not determined merely by its fusion rules. Its associators (F symbols)
 and exchanges (R symbols) must satisfy stringent algebraic identities before numerical
- braiding predictions can be trusted. Conventions, phases, category gauge changes and
+braiding predictions can be trusted. Conventions, phases, category gauge changes and
 fusion-tree indexing can create subtle errors, even in small models.
 
 **Bradiant** provides an independent, inspectable path from raw F/R tables to
