@@ -13,4 +13,4 @@ __all__ = ["FusionModel", "ModelError", "fibonacci", "cyclic", "ising", "audit",
            "load_model", "save_model", "model_to_dict", "model_from_dict",
            "fusion_invariants", "braiding_invariants", "fusion_matrices",
            "FusionInvariants", "BraidingInvariants"]
-__version__ = "0.3.0"
+__version__ = "0.3.1"

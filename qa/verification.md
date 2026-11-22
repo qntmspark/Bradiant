@@ -1,4 +1,4 @@
-# Bradiant v0.3.0: verification and release note
+# Bradiant v0.3.1: verification and release note
 
 **Scope:** Local numerical/scientific software validation and distribution checks. No hardware measurements or mathematical proof are claimed.
 

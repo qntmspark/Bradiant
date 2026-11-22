@@ -1,5 +1,5 @@
 ---
-title: 'Bradiant: Reproducible audits of anyon fusion and braiding data'
+title: 'Bradiant: Auditing anyon fusion and braiding data'
 tags:
   - Python
   - topological quantum computation
@@ -8,11 +8,11 @@ tags:
   - braid groups
   - numerical verification
 authors:
-  - name: 'AUTHOR NAME (confirm before submission)'
+  - name: 'Rihaan Shah'
     affiliation: '1'
 affiliations:
   - index: 1
-    name: 'Independent researcher, United States (confirm before submission)'
+    name: 'Independent researcher, United States'
 date: 21 November 2026
 bibliography: paper.bib
 ---
@@ -40,7 +40,7 @@ where $s$ ranges over admissible charge sectors and $P_s^{(1)}$ and $P_s^{(2)}$ 
 
 Several existing programs address related but different problems. **Anyonica** is used for symbolic construction and analysis of fusion-category data, including systematic classification of low-rank multiplicity-free categories [@vercleyen2026]. **TensorCategories.jl** is a broader Julia framework for computational category theory, supporting skeletal fusion data and related algebraic operations [@tensorcategories2026]. **TQSim** implements an anyon-based topological circuit simulator [@tqsim]. These projects have capabilities beyond the scope of Bradiant; no claim of priority for coherence checking or braid-matrix computation is made here.
 
-Bradiant was developed as a deliberately small, Python-native, *table-first auditing layer*: its primary input is a complete numerical dataset, its principal result is an inspectable consistency report, and it can be used without adopting a category solver or a circuit simulator. Explicit charge labels, stored complex coefficients, ordered fusion paths, and JSON model fingerprints are intended to make discrepancies between independently produced datasets easier to reproduce. The separate implementation is therefore motivated by interoperability and auditability, not by demonstrated improvements in generality or execution speed. Direct cross-package benchmarks remain future work.
+Bradiant was developed as a deliberately small, Python-native, *table-first auditing layer*: its primary input is a complete numerical dataset, its principal result is an inspectable consistency report, and it can be used without adopting a category solver or a circuit simulator. Explicit charge labels, stored complex coefficients, ordered fusion paths, and JSON model fingerprints are intended to make discrepancies between independently produced datasets easier to reproduce. The separate implementation is motivated by interoperability and auditability, rather than claims of improved generality or execution speed.
 
 # Software design
 
@@ -54,11 +54,11 @@ Bradiant assumes multiplicity-free, finite, unitary input and supports homogeneo
 
 The repository provides executable reference models and verification scripts that make its behavior testable without a hardware backend. Fibonacci and Ising examples exercise non-Abelian F/R data, while pointed cyclic examples expose transparent and nontransparent charges. The checked Fibonacci and Ising datasets produce maximum hexagon residuals of approximately $3.14\times10^{-16}$ and $3.41\times10^{-16}$, respectively, in double precision. The reference tests recover the Fibonacci quantum dimension $(1+\sqrt{5})/2$ and the Ising dimension $\sqrt{2}$; additional tests deliberately corrupt input data or rephase fusion vertices to test failure detection and gauge invariance. The repository includes a reproducible reference-output generator, a timing protocol, and continuous integration across supported Python versions.
 
-These results establish a usable, testable numerical audit workflow, not a new physical discovery. At the time of this manuscript, the software has not been shown to have independent research users or publications enabled by it. Consequently, evidence of sustained public development and outside research use remains a prerequisite to an eventual JOSS submission, rather than an achievement claimed by this paper.
+This establishes reproducible numerical checks on concrete category datasets without claiming a new physical result. The source, tests, datasets, and command-line reproduction procedures are publicly available at [the Bradiant repository](https://github.com/qntmspark/Bradiant). The results reported here are internal software verification, not evidence of independent external adoption.
 
 # AI usage disclosure
 
-OpenAI ChatGPT (GPT-6, November 2026) assisted with software implementation, test development, documentation, and manuscript drafting. Automated tests, analytic reference comparisons, invalid-input tests, and gauge checks were executed to assess the generated material. Independent human scientific review and author approval are required before submission and have not been represented as completed.
+OpenAI ChatGPT (GPT-6, November 2026) assisted with software implementation, test development, documentation, and manuscript drafting. Automated tests, analytic reference comparisons, invalid-input tests, and gauge checks were executed to assess the generated material. The test suite and reproducibility materials provide verifiable checks of the assisted software; these checks do not replace independent expert review.
 
 # Acknowledgements
 

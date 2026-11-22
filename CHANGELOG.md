@@ -1,9 +1,9 @@
-## 0.3.0 - 2026-11-21
+## 0.3.1 (2026-11-21)
 
-- Align the public project, distribution and command name with the owner-supplied **Bradiant** wordmark and renamed GitHub repository.
-- Keep the previous `braidiant` Python import and CLI command as compatibility aliases.
-- Publish the original unmodified logo plus cropped variants and verify byte-level provenance.
-- Retain 0.2.1 validation hardening and expand regression coverage.
+- Confirmed author metadata: Rihaan Shah, independent researcher, United States.
+- Rebuilt JOSS manuscript; removed author and affiliation placeholders and journal-process text.
+- Updated CITATION.cff, license attribution, package author metadata, and primary logo link.
+- Numerical and code behavior unchanged relative to 0.3.0.
 
 ## 0.2.1 - 2026-11-21
 

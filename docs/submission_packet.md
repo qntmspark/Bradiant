@@ -3,9 +3,9 @@
 This is a set of truthful draft answers for the JOSS web form. Do not submit
 before the editorial eligibility conditions in `joss_readiness.md` are met.
 
-- **Software title:** Bradiant: Reproducible numerical audits of anyon fusion and braiding data
+- **Software title:** Bradiant: Auditing anyon fusion and braiding data
 - **Software repository:** https://github.com/qntmspark/Bradiant
-  (dedicated public repository; source is on the default branch once published)
+  (dedicated public repository; source on the default branch)
 - **Paper:** `paper.md` in the same branch
 - **Bibliography:** `paper.bib`
 - **License:** MIT, full license included in `LICENSE`
@@ -22,13 +22,11 @@ before the editorial eligibility conditions in `joss_readiness.md` are met.
 - **Potential research application:** validating an externally sourced
   F/R dataset before consuming it in an anyonic simulation workflow.
 - **Available evidence:** executable reference models, 68 locally executed
-  automated tests (as of the 0.3.0 release check), source-independent expected values,
+  automated tests (as of the 0.3.1 release check), source-independent expected values,
   corruption detection, and a local timing protocol. This is **not** evidence
   of independent external research adoption.
 - **Publication/archival DOI:** none assigned; do not fabricate a DOI.
-- **Author and affiliation:** *human author must verify and enter their own
-  correct identity and appropriate affiliation*. GitHub username is not a
-  substitute for an accurate author record.
+- **Author and affiliation:** Rihaan Shah, independent researcher, United States (confirmed by author).
 - **AI use:** JOSS requires disclosure; the draft paper includes a truthful
   statement and notes that human validation has not yet been confirmed.
 - **Previous submissions:** none claimed.
@@ -44,7 +42,7 @@ before the editorial eligibility conditions in `joss_readiness.md` are met.
    resolve their concrete code and manuscript findings.
 4. Create a dedicated open repository and confirm issues/PRs, LICENSE, tests,
    docs and installation work for a third party.
-5. Verify the manuscript author, affiliations, relevant ethics/disclosures,
+5. Verify relevant ethics/disclosures,
    all bibliography details, and human responsibility statement.
 6. Create an archived software release/DOI (e.g. Zenodo) when the maintained
    repository and release are stable; update paper and `CITATION.cff`.

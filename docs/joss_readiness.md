@@ -27,7 +27,8 @@ A newly uploaded code dump does not meet the public-history requirement.
 - [ ] Stable public upstream repository with full issue tracker and reviewable PRs.
 - [ ] >6 months of active public development with releases distributed in time.
 - [ ] Recorded research use in a preprint, research workflow, or external project.
-- [ ] Human author verifies contributor identity, contribution statements,
+- [x] Manuscript author identity and independent-researcher affiliation confirmed.
+- [ ] Human author verifies contribution statements,
       mathematical and programming choices, software claims, licensing and AI disclosure.
 - [ ] Permanent archived software release (e.g., Zenodo) with real DOI; JOSS draft DOI is an automated placeholder, not a DOI.
 - [ ] JOSS form submitted and editorial pre-review issue opened.

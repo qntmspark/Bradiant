@@ -11,7 +11,7 @@ The 2019 manuscript does **not** supersede current JOSS paper requirements.
 The document uses Pandoc/YAML metadata and the currently required sections:
 Summary, Statement of need, State of the field, Software design, Research
 impact statement, AI usage disclosure, Acknowledgements, and References.
-The body is about 1,020 words, within JOSS's 750–1,750-word range.
+The body is about 975 words, within JOSS's 750–1,750-word range.
 
 ## Official typesetting
 

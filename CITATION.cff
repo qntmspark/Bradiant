@@ -3,7 +3,8 @@ message: "If Bradiant helps your work, cite the repository until a DOI is availa
 title: "Bradiant: numerical consistency audits and braid representations for anyon models"
 type: software
 repository-code: "https://github.com/qntmspark/Bradiant"
-version: "0.3.0"
+version: "0.3.1"
 license: MIT
 authors:
-  - name: "Bradiant contributors (confirm individual authors before formal citation)"
+  - given-names: Rihaan
+    family-names: Shah
