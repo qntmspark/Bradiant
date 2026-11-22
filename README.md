@@ -11,14 +11,14 @@
 
 ---
 
-## Why Braidiant?
+## Why Bradiant?
 
 An anyon model is not determined merely by its fusion rules. Its associators (F symbols)
- and exchanges (R symbols) must satisfy stringent algebraic identities before numerical
+and exchanges (R symbols) must satisfy stringent algebraic identities before numerical
  braiding predictions can be trusted. Conventions, phases, category gauge changes and
 fusion-tree indexing can create subtle errors, even in small models.
 
-**Braidiant** provides an independent, inspectable path from raw F/R tables to
+**Bradiant** provides an independent, inspectable path from raw F/R tables to
 **exhaustively enumerated numerical coherence tests** for a finite multiplicity-free
 model, and then to braid matrices, braid words and reproducible JSON records.
 
@@ -48,11 +48,11 @@ Requires Python 3.10 or later. Clone the repository or unpack a source release, 
 ```bash
 python -m pip install -e '.[dev]'
 python -m pytest
-braidiant audit
-braidiant --model ising audit
-braidiant --model cyclic --n 3 audit
-braidiant --model ising invariants
-braidiant braid --charge tau --anyons 4 --total 1 --word 1,-2,1
+bradiant audit
+bradiant --model ising audit
+bradiant --model cyclic --n 3 audit
+bradiant --model ising invariants
+bradiant braid --charge tau --anyons 4 --total 1 --word 1,-2,1
 ```
 
 The command prints JSON and returns a nonzero status if an audit fails the specified
@@ -63,7 +63,7 @@ a negative integer denotes its inverse. Command-line flags `--model`, `--model-f
 ### Python API
 
 ```python
-from braidiant import fibonacci, audit, BraidRepresentation
+from bradiant import fibonacci, audit, BraidRepresentation
 
 model = fibonacci()
 result = audit(model, tol=1e-10)
@@ -75,7 +75,7 @@ print(braids.generator(2))
 print(braids.word([1, -2, 1]))
 print(braids.relations())
 
-from braidiant import fusion_invariants, braiding_invariants
+from bradiant import fusion_invariants, braiding_invariants
 print(fusion_invariants(model).to_dict())
 print(braiding_invariants(model).transparent_charges)
 ```
@@ -83,7 +83,7 @@ print(braiding_invariants(model).transparent_charges)
 ### Load your own fusion model
 
 ```python
-from braidiant import load_model, audit, save_model, fibonacci
+from bradiant import load_model, audit, save_model, fibonacci
 save_model(fibonacci(), "fibonacci.json")
 model = load_model("fibonacci.json")
 print(audit(model).to_dict())
@@ -93,6 +93,8 @@ The JSON schema uses `charges`, `unit`, `fusion`, `F`, `R`, `schema_version: 1`,
 and each complex entry is represented by its real and imaginary parts. See
 [`docs/model_format.md`](docs/model_format.md) and
 [`examples/fibonacci.json`](examples/fibonacci.json) for the exact ordering.
+
+The former `braidiant` import and command remain supported as compatibility aliases.
 
 ## Reproduce the verification data
 
@@ -153,7 +155,7 @@ classifying fusion-category data; [TQSim](https://github.com/Constantine-Quantum
 provides anyonic quantum-circuit simulation.
 [TensorCategories.jl](https://tensorcategories.github.io/TensorCategories.jl/stable/)
 implements broader symbolic and numerical tensor-category operations.
-Braidiant is scoped as an
+Bradiant is scoped as an
 independent, table-driven *audit* and braid-representation library, with all
 sector-level identities checked, JSON input/output, and deliberate corruption
 regression tests. This is a complementary focus, not a claim of superior speed or
