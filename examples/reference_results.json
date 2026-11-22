@@ -1,0 +1,540 @@
+{
+  "bradiant_version": "0.3.0",
+  "braid_examples": [
+    {
+      "charge": "tau",
+      "dimension": 2,
+      "model": "Fibonacci",
+      "n": 4,
+      "relations": {
+        "far_commutation": 0.0,
+        "unitarity": 1.5771601243876645e-16,
+        "yang_baxter": 2.355138688025663e-16
+      },
+      "total": "1"
+    },
+    {
+      "charge": "tau",
+      "dimension": 5,
+      "model": "Fibonacci",
+      "n": 6,
+      "relations": {
+        "far_commutation": 1.462488295955489e-17,
+        "unitarity": 1.6653345369377348e-16,
+        "yang_baxter": 3.253794000681681e-16
+      },
+      "total": "1"
+    },
+    {
+      "charge": "sigma",
+      "dimension": 2,
+      "model": "Ising",
+      "n": 4,
+      "relations": {
+        "far_commutation": 0.0,
+        "unitarity": 5.551953630577995e-16,
+        "yang_baxter": 2.7755575615628914e-16
+      },
+      "total": "1"
+    },
+    {
+      "charge": "sigma",
+      "dimension": 4,
+      "model": "Ising",
+      "n": 6,
+      "relations": {
+        "far_commutation": 0.0,
+        "unitarity": 4.440892098500626e-16,
+        "yang_baxter": 1.2412670766236366e-16
+      },
+      "total": "1"
+    }
+  ],
+  "evidence_type": "double_precision_numerical_consistency_checks_not_hardware",
+  "models": [
+    {
+      "audit": {
+        "f_sectors": 12,
+        "f_unitarity_residual": 1.1102230246251565e-16,
+        "hexagon_residual": 3.1401849173675503e-16,
+        "hexagon_sectors": 24,
+        "model": "Fibonacci",
+        "passed": true,
+        "pentagon_residual": 1.1102230246251565e-16,
+        "pentagon_sectors": 27,
+        "r_unitarity_residual": 0.0,
+        "tolerance": 1e-10,
+        "unit_residual": 0.0,
+        "worst_hexagon_sector": [
+          "first",
+          "tau",
+          "tau",
+          "tau",
+          "1"
+        ],
+        "worst_pentagon_sector": [
+          "tau",
+          "tau",
+          "tau",
+          "tau",
+          "1"
+        ]
+      },
+      "braiding": {
+        "monodromies": [
+          {
+            "a": "1",
+            "b": "1",
+            "channel": "1",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "tau",
+            "channel": "tau",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "tau",
+            "b": "1",
+            "channel": "tau",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "tau",
+            "b": "tau",
+            "channel": "1",
+            "imag": 0.9510565162951536,
+            "real": 0.3090169943749472
+          },
+          {
+            "a": "tau",
+            "b": "tau",
+            "channel": "tau",
+            "imag": -0.587785252292473,
+            "real": -0.8090169943749476
+          }
+        ],
+        "transparency_tolerance": 1e-10,
+        "transparent_charges": [
+          "1"
+        ]
+      },
+      "fusion": {
+        "dimensions": {
+          "1": 1.0,
+          "tau": 1.6180339887498951
+        },
+        "duals": {
+          "1": "1",
+          "tau": "tau"
+        },
+        "eigenvector_residual": 8.881784197001252e-16,
+        "global_dimension": 3.618033988749896,
+        "total_quantum_dimension": 1.9021130325903073
+      },
+      "name": "Fibonacci"
+    },
+    {
+      "audit": {
+        "f_sectors": 33,
+        "f_unitarity_residual": 2.220446049250313e-16,
+        "hexagon_residual": 3.410902312858366e-16,
+        "hexagon_sectors": 66,
+        "model": "Ising",
+        "passed": true,
+        "pentagon_residual": 2.220446049250313e-16,
+        "pentagon_sectors": 106,
+        "r_unitarity_residual": 0.0,
+        "tolerance": 1e-10,
+        "unit_residual": 0.0,
+        "worst_hexagon_sector": [
+          "first",
+          "sigma",
+          "sigma",
+          "sigma",
+          "sigma"
+        ],
+        "worst_pentagon_sector": [
+          "sigma",
+          "sigma",
+          "sigma",
+          "sigma",
+          "1"
+        ]
+      },
+      "braiding": {
+        "monodromies": [
+          {
+            "a": "1",
+            "b": "1",
+            "channel": "1",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "psi",
+            "channel": "psi",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "sigma",
+            "channel": "sigma",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "psi",
+            "b": "1",
+            "channel": "psi",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "psi",
+            "b": "psi",
+            "channel": "1",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "psi",
+            "b": "sigma",
+            "channel": "sigma",
+            "imag": 0.0,
+            "real": -1.0
+          },
+          {
+            "a": "sigma",
+            "b": "1",
+            "channel": "sigma",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "sigma",
+            "b": "psi",
+            "channel": "sigma",
+            "imag": 0.0,
+            "real": -1.0
+          },
+          {
+            "a": "sigma",
+            "b": "sigma",
+            "channel": "1",
+            "imag": -0.7071067811865476,
+            "real": 0.7071067811865475
+          },
+          {
+            "a": "sigma",
+            "b": "sigma",
+            "channel": "psi",
+            "imag": 0.7071067811865477,
+            "real": -0.7071067811865475
+          }
+        ],
+        "transparency_tolerance": 1e-10,
+        "transparent_charges": [
+          "1"
+        ]
+      },
+      "fusion": {
+        "dimensions": {
+          "1": 1.0,
+          "psi": 0.9999999999999983,
+          "sigma": 1.414213562373094
+        },
+        "duals": {
+          "1": "1",
+          "psi": "psi",
+          "sigma": "sigma"
+        },
+        "eigenvector_residual": 3.3306690738754696e-15,
+        "global_dimension": 3.999999999999994,
+        "total_quantum_dimension": 1.9999999999999984
+      },
+      "name": "Ising"
+    },
+    {
+      "audit": {
+        "f_sectors": 27,
+        "f_unitarity_residual": 0.0,
+        "hexagon_residual": 1.4432899320127035e-15,
+        "hexagon_sectors": 54,
+        "model": "Z3(k=1)",
+        "passed": true,
+        "pentagon_residual": 0.0,
+        "pentagon_sectors": 81,
+        "r_unitarity_residual": 1.1102230246251565e-16,
+        "tolerance": 1e-10,
+        "unit_residual": 0.0,
+        "worst_hexagon_sector": [
+          "second",
+          "1",
+          "2",
+          "2",
+          "2"
+        ],
+        "worst_pentagon_sector": null
+      },
+      "braiding": {
+        "monodromies": [
+          {
+            "a": "0",
+            "b": "0",
+            "channel": "0",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "0",
+            "b": "1",
+            "channel": "1",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "0",
+            "b": "2",
+            "channel": "2",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "0",
+            "channel": "1",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "1",
+            "channel": "2",
+            "imag": -0.8660254037844384,
+            "real": -0.5000000000000003
+          },
+          {
+            "a": "1",
+            "b": "2",
+            "channel": "0",
+            "imag": 0.8660254037844392,
+            "real": -0.4999999999999991
+          },
+          {
+            "a": "2",
+            "b": "0",
+            "channel": "2",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "2",
+            "b": "1",
+            "channel": "0",
+            "imag": 0.8660254037844392,
+            "real": -0.4999999999999991
+          },
+          {
+            "a": "2",
+            "b": "2",
+            "channel": "1",
+            "imag": -0.8660254037844378,
+            "real": -0.5000000000000017
+          }
+        ],
+        "transparency_tolerance": 1e-10,
+        "transparent_charges": [
+          "0"
+        ]
+      },
+      "fusion": {
+        "dimensions": {
+          "0": 1.0,
+          "1": 0.9999999999999994,
+          "2": 0.9999999999999997
+        },
+        "duals": {
+          "0": "0",
+          "1": "2",
+          "2": "1"
+        },
+        "eigenvector_residual": 8.881784197001252e-16,
+        "global_dimension": 2.9999999999999982,
+        "total_quantum_dimension": 1.7320508075688767
+      },
+      "name": "Z3(k=1)"
+    },
+    {
+      "audit": {
+        "f_sectors": 64,
+        "f_unitarity_residual": 0.0,
+        "hexagon_residual": 7.34788079488412e-16,
+        "hexagon_sectors": 128,
+        "model": "Z4(k=1)",
+        "passed": true,
+        "pentagon_residual": 0.0,
+        "pentagon_sectors": 256,
+        "r_unitarity_residual": 0.0,
+        "tolerance": 1e-10,
+        "unit_residual": 0.0,
+        "worst_hexagon_sector": [
+          "first",
+          "3",
+          "3",
+          "3",
+          "1"
+        ],
+        "worst_pentagon_sector": null
+      },
+      "braiding": {
+        "monodromies": [
+          {
+            "a": "0",
+            "b": "0",
+            "channel": "0",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "0",
+            "b": "1",
+            "channel": "1",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "0",
+            "b": "2",
+            "channel": "2",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "0",
+            "b": "3",
+            "channel": "3",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "0",
+            "channel": "1",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "1",
+            "channel": "2",
+            "imag": 1.2246467991473532e-16,
+            "real": -1.0
+          },
+          {
+            "a": "1",
+            "b": "2",
+            "channel": "3",
+            "imag": -2.4492935982947064e-16,
+            "real": 1.0
+          },
+          {
+            "a": "1",
+            "b": "3",
+            "channel": "0",
+            "imag": 3.6739403974420594e-16,
+            "real": -1.0
+          },
+          {
+            "a": "2",
+            "b": "0",
+            "channel": "2",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "2",
+            "b": "1",
+            "channel": "3",
+            "imag": -2.4492935982947064e-16,
+            "real": 1.0
+          },
+          {
+            "a": "2",
+            "b": "2",
+            "channel": "0",
+            "imag": -4.898587196589413e-16,
+            "real": 1.0
+          },
+          {
+            "a": "2",
+            "b": "3",
+            "channel": "1",
+            "imag": -7.347880794884119e-16,
+            "real": 1.0
+          },
+          {
+            "a": "3",
+            "b": "0",
+            "channel": "3",
+            "imag": 0.0,
+            "real": 1.0
+          },
+          {
+            "a": "3",
+            "b": "1",
+            "channel": "0",
+            "imag": 3.6739403974420594e-16,
+            "real": -1.0
+          },
+          {
+            "a": "3",
+            "b": "2",
+            "channel": "1",
+            "imag": -7.347880794884119e-16,
+            "real": 1.0
+          },
+          {
+            "a": "3",
+            "b": "3",
+            "channel": "2",
+            "imag": 1.102182119232618e-15,
+            "real": -1.0
+          }
+        ],
+        "transparency_tolerance": 1e-10,
+        "transparent_charges": [
+          "0",
+          "2"
+        ]
+      },
+      "fusion": {
+        "dimensions": {
+          "0": 1.0,
+          "1": 1.0000000000000002,
+          "2": 1.0000000000000002,
+          "3": 1.0000000000000002
+        },
+        "duals": {
+          "0": "0",
+          "1": "3",
+          "2": "2",
+          "3": "1"
+        },
+        "eigenvector_residual": 4.440892098500626e-16,
+        "global_dimension": 4.000000000000002,
+        "total_quantum_dimension": 2.0000000000000004
+      },
+      "name": "Z4(k=1)"
+    }
+  ],
+  "numpy_version": "2.3.5",
+  "python_version": "3.13.5",
+  "schema_version": 2
+}

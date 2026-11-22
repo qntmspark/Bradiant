@@ -1,0 +1,26 @@
+{
+  "author_human_signoff": "not yet recorded",
+  "bibliography": "paper.bib",
+  "ci_verification": "pending new main branch publication",
+  "joss_submission": "not submitted",
+  "logo_integrity": "original user-supplied PNG preserved byte for byte",
+  "logo_sha256": "1d14d1cfda143d649611c84d1542cbaad680963ed773cc0e9e8aa685a79fd870",
+  "logo_size_bytes": 1356281,
+  "manuscript_source": "paper.md",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "project": "Bradiant",
+  "python": "3.13.5",
+  "release": "0.3.0",
+  "remaining_joss_gates": [
+    "greater than six months of substantive public development",
+    "demonstrated research use",
+    "human verification of authorship and all AI-assisted scientific content",
+    "accurate metadata and relevant disclosures",
+    "archived software DOI when available"
+  ],
+  "scope": "finite multiplicity-free unitary braided fusion data",
+  "test_command": "PYTHONPATH=src python -m pytest -q",
+  "tests_failed": 0,
+  "tests_passed": 68,
+  "verification_type": "local numerical and package tests; not hardware experiments or formal proofs"
+}
